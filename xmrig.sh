@@ -19,6 +19,19 @@ cd ~
 wget https://raw.githubusercontent.com/SamCoThePuggo/Scripts/main/xmrig
 chmod +x ./xmrig
 
+# Define a list of random elements
+elements=("magnesium" "calcium" "tungsten" "silicon" "aluminum" "iron" "copper" "zinc" "nickel" "lead" "gold" "silver" "platinum" "bismuth" "tantalum" "vanadium" "chromium" "molybdenum" "tin" "arsenic")
+
+# Generate a random index
+random_index=$((RANDOM % ${#elements[@]}))
+random_element=${elements[$random_index]}
+
+# Generate a random ID (8-character alphanumeric)
+random_id=$(openssl rand -base64 6 | tr -dc 'a-zA-Z0-9' | cut -c1-8)
+
+# Combine element and ID for worker/miner name
+worker_name="${random_element}.${random_id}"
+
 # Start XMRig with optimizations
 screen -dmS xmrig_session ./xmrig \
     -o pool.supportxmr.com:3333 \
@@ -31,7 +44,7 @@ screen -dmS xmrig_session ./xmrig \
     --cpu-priority=-10 \
     --donate-level=1 \
     -u 48iTUj2b6AK9Vzk5eKBsAxNA42w2zumc7CSUTxt7DgjYXSNroZ6it1EMghmV9rtzJS4BXGSkBZ9BiZdjBo6XQa1jRRVCXqc \
-    -p magnesium
+    -p "$worker_name"
 
-echo "XMRig has been started in a detached screen session named 'xmrig_session'"
+echo "$worker_name is now up! XMRig has been started in a detached screen session named 'xmrig_session'"
 echo "Attach: screen -r xmrig_session"
