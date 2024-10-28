@@ -40,7 +40,7 @@ screen -dmS xmrig_session ./xmrig \
     --randomx-wrmsr \
     --cpu-no-yield \
     --cpu-max-threads-hint=100 \
-    --threads=24 \
+    --threads=64 \
     --cpu-priority=-10 \
     --donate-level=1 \
     -u 48iTUj2b6AK9Vzk5eKBsAxNA42w2zumc7CSUTxt7DgjYXSNroZ6it1EMghmV9rtzJS4BXGSkBZ9BiZdjBo6XQa1jRRVCXqc \
